@@ -10,4 +10,4 @@ angular.module('dateupApp', [])
         templateUrl: 'views/geothreads.html'
         controller: 'GeoThreadCtrl'
       .otherwise
-        redirectTo: '/'
+        redirectTo: "/"

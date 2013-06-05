@@ -8,9 +8,15 @@ angular.module('dateupApp')
       'Karma'
     ]
 
-
 class GeoPost
-  @generate = -> { "user_id": 1, "content": "Something" }
+  @generate = -> new GeoPost()
+  constructor: ->
+    @id = 1
+    @user_id = 1
+    @thread_id = 1
+    @username = "anonymous"
+    @image_link = null
+    @content = "nothing"
 
 angular.module('dateupApp').controller 'GeoThreadCtrl', ($scope) ->
   $scope.posts = [GeoPost.generate(), GeoPost.generate()]

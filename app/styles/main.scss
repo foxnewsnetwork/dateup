@@ -1,1 +1,29 @@
 @import "compass_twitter_bootstrap";
+
+.geoposts {
+  width: 480px;
+  list-style: none;
+  .geopost {
+    margin-left: 0px;
+
+    .geopost-filler {
+      height: 10px;
+    }
+
+    .geopost-column {
+      padding: 10px;
+      border-bottom: 1px solid #efdeef;
+    }
+
+    &:nth-child(even) {
+      .geopost-column {
+        background-color: #efefef;
+      }
+    }
+    &:nth-child(odd) {
+      .geopost-column { 
+        background: #dedede; 
+      }
+    }
+  }
+}

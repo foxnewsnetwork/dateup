@@ -1,5 +1,21 @@
-<ul>
-  <li ng-repeat="post in posts">
-    {{post.user_id}} -- {{post.content}}
+<ul class="geoposts">
+  <li ng-repeat="post in posts" class="geopost" id="geopost#{{post.id}}">
+    <table class="geopost-table" cellspacing="0">
+      <tbody class="geopost-body">
+        <tr class="geopost-row">
+          <td class="geopost-column">
+            <div class="geopost-header">
+              By: {{post.user_id}} | ID: {{post.id}}
+            </div>
+            <div class="geopost-content">
+              <span class="geopost-thumbnail">
+              </span>
+              {{post.content}}
+            </div>
+          </td>
+          <td class="geopost-filler"></td>
+        </tr>
+      </tbody>
+    </table>
   </li>
 </ul>
