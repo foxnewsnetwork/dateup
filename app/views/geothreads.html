@@ -1,3 +1,4 @@
+<!-- Refactor to directive -->
 <div class="geothread" ng-repeat="thread in threads" id="geothread#{{thread.id}}">
   <table class="geothread-preview-table">
     <tbody class="geothread-preview-body">
@@ -14,6 +15,14 @@
         </td>
       </tr>
     </tbody>
-  </table>
-  
+  </table>  
+</div>
+
+<!-- Refactor to directive / shared partial -->
+<div class="footer-dock" ng-controller="FooterDockCtrl">
+  <ul class="footer-dock-list">
+    <li class="footer-dock-icon" ng-repeat="link in links">
+      <a href="{{link.href}}">{{link.action}}</a>
+    </li>
+  </ul>
 </div>

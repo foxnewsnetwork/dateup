@@ -1,6 +1,18 @@
 @import "compass_twitter_bootstrap";
 
-.geothread {
+.footer-dock {
+  ul {
+    list-style: none;
+    margin-left: 0px;
+    li {
+      display: inline-block;
+      width: 75px;
+      height: 75px;
+    }
+  }
+}
+
+.geothread {  
   .geothread-point {
     padding-left: 10px;
     padding-right: 10px;

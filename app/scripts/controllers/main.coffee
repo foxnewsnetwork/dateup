@@ -22,6 +22,8 @@ class GeoPost
 
 GeoPost.index.$inject = ['$scope', '$routeParams']
 
+angular.module('dateupApp').controller 'GeoPostsCtrl', GeoPost.index
+
 class GeoThread
   @generate = -> new GeoThread()
   get_preview_posts: ->
@@ -35,8 +37,12 @@ class GeoThread
   @index = ($scope) ->
     $scope.threads = [GeoThread.generate(), GeoThread.generate()]
 
-GeoThread.index.$inject = ['$scope'] 
-
 angular.module("dateupApp").controller 'GeoThreadsCtrl', GeoThread.index
 
-angular.module('dateupApp').controller 'GeoPostsCtrl', GeoPost.index
+class FooterDock
+  @controller = ($scope) ->
+    $scope.links = []
+    $scope.links.push { "href": "#/geothreads", "action": "GS" }
+    $scope.links.push { "href": "#/geothread/3", "action": "GP" }
+
+angular.module("dateupApp").controller 'FooterDockCtrl', FooterDock.controller
