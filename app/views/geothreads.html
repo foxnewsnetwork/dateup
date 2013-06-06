@@ -1,21 +1,19 @@
-<ul class="geoposts">
-  <li ng-repeat="post in posts" class="geopost" id="geopost#{{post.id}}">
-    <table class="geopost-table" cellspacing="0">
-      <tbody class="geopost-body">
-        <tr class="geopost-row">
-          <td class="geopost-column">
-            <div class="geopost-header">
-              By: {{post.user_id}} | ID: {{post.id}}
-            </div>
-            <div class="geopost-content">
-              <span class="geopost-thumbnail">
-              </span>
-              {{post.content}}
-            </div>
-          </td>
-          <td class="geopost-filler"></td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-</ul>
+<div class="geothread" ng-repeat="thread in threads" id="geothread#{{thread.id}}">
+  <table class="geothread-preview-table">
+    <tbody class="geothread-preview-body">
+      <tr class="geothread-preview-row">
+        <td class="geothread-point-column">
+          <span class="geothread-point">!</span>
+        </td>
+        <td class="geothread-posts-column">
+          <ul class="geoposts">
+            <li class="geopost" ng-repeat="post in thread.preview_posts">
+              Refactor to Directive! {{post.id}}
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+</div>

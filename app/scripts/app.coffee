@@ -4,10 +4,10 @@ angular.module('dateupApp', [])
   .config ($routeProvider) ->
     $routeProvider
       .when '/',
-        templateUrl: 'views/main.html'
-        controller: 'MainCtrl'
-      .when '/geothreads',
         templateUrl: 'views/geothreads.html'
-        controller: 'GeoThreadCtrl'
+        controller: 'GeoThreadsCtrl'
+      .when '/geothread/:id',
+        templateUrl: 'views/geoposts.html'
+        controller: 'GeoPostsCtrl'
       .otherwise
         redirectTo: "/"
