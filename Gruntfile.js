@@ -25,6 +25,10 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/scripts/{,*/}{,*/}{,*/}*.coffee'],
         tasks: ['coffee:dist']
       },
+      jade: {
+        files: ['<%= yeoman.app %>/views/{,*/}{,*/}{,*/}*.jade'],
+        tasks: ['jade:dist']
+      },
       coffeeTest: {
         files: ['test/spec/{,*/}*.coffee'],
         tasks: ['coffee:test']
@@ -36,6 +40,7 @@ module.exports = function (grunt) {
       livereload: {
         files: [
           '<%= yeoman.app %>/{,*/}*.html',
+          '<%= yeoman.app %>/{,*/}*.jade',
           '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
           '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
@@ -102,6 +107,36 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'karma.conf.js',
         singleRun: true
+      }
+    },
+    jade: {
+      dist: {
+        options: {
+          data: {
+            debug: false
+          }
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>/views',
+          src: '{,*/}{,*/}{,*/}*.jade',
+          dest: '.tmp/views',
+          ext: '.html'
+        }]
+      },
+      debug: {
+        options: {
+          data: {
+            debug: true
+          }
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>/views',
+          src: '{,*/}{,*/}{,*/}*.jade',
+          dest: '.tmp/views',
+          ext: '.html'
+        }]
       }
     },
     coffee: {
@@ -265,6 +300,7 @@ module.exports = function (grunt) {
   grunt.registerTask('server', [
     'clean:server',
     'coffee:dist',
+    'jade:dist',
     'compass:server',
     'livereload-start',
     'connect:livereload',
@@ -275,6 +311,7 @@ module.exports = function (grunt) {
   grunt.registerTask('test', [
     'clean:server',
     'coffee',
+    'jade',
     'compass',
     'connect:test',
     'karma'
@@ -285,6 +322,7 @@ module.exports = function (grunt) {
     'jshint',
     'test',
     'coffee',
+    'jade',
     'compass:dist',
     'useminPrepare',
     'imagemin',
