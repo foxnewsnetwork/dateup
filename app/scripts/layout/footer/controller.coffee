@@ -1,10 +1,10 @@
 define 'layout/footer/controller', [], ->
   class Controller
-    @instance = new Controller()
     constructor: ->
       @manage = ($scope) ->
         $scope.links = []
-        $scope.links.push { "href": "#/geothreads", "action": "GS" }
-        $scope.links.push { "href": "#/geothread/3", "action": "GP" }
+        $scope.links.push { "href": "#/not_implemented_yet", "action": "Interest 1"}
+        $scope.links.push { "href": "#/not_implemented_yet", "action": "Interest 2"}
+        $scope.links.push { "href": "#/not_implemented_yet", "action": "Interest 3"}
       @manage.$inject = ['$scope']
-  return Controller.instance
+  return new Controller()
