@@ -15,7 +15,8 @@ require.config
     "geoboard/geothread/model": "scripts/geoboard/geothread/model",
     "geoboard/geothread/geopost": "scripts/geoboard/geothread/geopost",
     "geoboard/geothread/geopost/controller": "scripts/geoboard/geothread/geopost/controller",
-    "geoboard/geothread/geopost/model": "scripts/geoboard/geothread/geopost/model"
+    "geoboard/geothread/geopost/model": "scripts/geoboard/geothread/geopost/model",
+    "geoboard/geothread/geopost/directive": "scripts/geoboard/geothread/geopost/directive"
   shim:
     "angular-resource": 
       deps: ["angular"]

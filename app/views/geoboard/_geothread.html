@@ -1,5 +1,4 @@
-<!-- Refactor to directive -->
-<div class="geothread" ng-repeat="thread in threads" id="geothread#{{thread.id}}">
+<div class="geothread" id="geothread#{{thread.id}}">
   <table class="geothread-preview-table">
     <tbody class="geothread-preview-body">
       <tr class="geothread-preview-row">
@@ -7,7 +6,9 @@
           <span class="geothread-point">!</span>
         </td>
         <td class="geothread-posts-column">
-          <geothread></geothread>
+          <ul class="geoposts">
+            <geopost ng-repeat="post in thread.posts"></geopost>
+          </ul>
         </td>
       </tr>
     </tbody>

@@ -10,5 +10,6 @@ define "config/routes", [], ->
             controller: 'MainCtrl'
           .when '/geothreads',
             templateUrl: 'views/geoboard.html'
+            controller: 'GeoThreadCtrl'
           .otherwise
             redirectTo: "/"
