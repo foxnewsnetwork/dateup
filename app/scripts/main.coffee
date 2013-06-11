@@ -1,14 +1,16 @@
 'use strict'
 
-define 'main', ["layout/footer", "geoboard/geothread"], (Footer, Geothread)-> 
+requirements = [
+  "main/controller", 
+  "main/filter", 
+  "layout",
+  "geoboard"]
+  
+define 'main', requirements, (MainCtrl, Filters, Layout, Geoboard)-> 
   class Main
     @public_static_void = (app) -> new Main(app)
     constructor: (app) ->
-      new Geothread app
-      new Footer app
-      app.controller 'MainCtrl', ($scope) ->
-        $scope.awesomeThings = [
-          'HTML5 Boilerplate',
-          'AngularJS',
-          'Karma'
-        ]
+      new Layout app
+      new Geoboard app
+      new MainCtrl app
+      new Filters app

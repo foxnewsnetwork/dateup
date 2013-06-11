@@ -8,7 +8,7 @@ define "config/routes", [], ->
           .when '/',
             templateUrl: 'views/main.html'
             controller: 'MainCtrl'
-          .when '/geothreads',
+          .when '/q/:query',
             templateUrl: 'views/geoboard.html'
             controller: 'GeoThreadCtrl'
           .otherwise

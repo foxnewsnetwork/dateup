@@ -1,3 +1,23 @@
 @import "compass_twitter_bootstrap";
 @import "geoboard";
 @import "layout";
+
+body {
+  background-color: #EEF2FF;
+}
+
+header.main-header {
+  padding-top: 40px;
+}
+
+.row-header {
+  .logo {
+    text-align: center;
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+      color: #660011;
+    }
+  }
+}

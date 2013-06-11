@@ -1,3 +1,5 @@
-ul.footer-dock-list
-  li.footer-dock-icon(ng-repeat="link in links")
-    a(href="{{link.href}}") {{link.action}}
+footer.footer.footer-dock
+  div.container
+    ul.footer-links
+      li(ng-repeat="link in links")
+        a(href="{{link.href}}") {{link.action}}

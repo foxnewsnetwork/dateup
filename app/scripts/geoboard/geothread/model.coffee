@@ -1,6 +1,9 @@
 define 'geoboard/geothread/model', ['geoboard/geothread/geopost/model'], (Post) -> 
   class Model
     @generate = -> new Model()
+    @search = (query) ->
+      [0..(Math.floor Math.random()*15)].map =>
+        @generate()
     get_preview_posts: ->
       [Post.generate(@id), Post.generate(@id)]
     constructor: ->
@@ -9,3 +12,4 @@ define 'geoboard/geothread/model', ['geoboard/geothread/geopost/model'], (Post) 
       @position = [14, 22]
       @username = "anonymous"
       @posts = @get_preview_posts()
+      @tags = ["Something", "something"]

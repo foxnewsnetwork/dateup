@@ -1,3 +1,14 @@
-div.hero-unit
-  h1 Angular
-  p Put stuff here 
+header.main-header
+  div.container
+    h1 {{app_name}}
+    form.search-bar.form-inline(action="#/q/{{query | queryString}}")
+      label.search-label I am looking for
+        input(ng-model="query").input-xlarge.search-query
+      input.search.btn(type="submit", ng-click="search()") Search
+
+div.container
+  div.row-fluid
+    div.span8.latest-thread-box
+      geothread(ng-repeat="thread in threads")
+    div.span4.nearest-interest-box
+      geotag(ng-repeat="tag in tags")

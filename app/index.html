@@ -25,23 +25,19 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
-      <div class="yield-content" ng-view></div>
+    <div class="dateupApp-container">
+      <!-- Global header -->
+      <navigation ng-controller="NavigationCtrl"></navigation>
+
+      <div class="yield-content container" ng-view></div>
 
       <!-- Global footer -->
-      <div class="footer-dock" ng-controller="FooterDockCtrl">
-        <ul class="footer-dock-list">
-          <li class="footer-dock-icon" ng-repeat="link in links">
-            <a href="{{link.href}}">{{link.action}}</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
+      <footerdock ng-controller="FooterDockCtrl"></footerdock>
 
     <!-- Framework Globals -->
     <script src="components/underscore/underscore.js"></script>
     <script src="components/requirejs/require.js"></script>
+    <script src="components/holderjs/holder.js"></script>
 
     <!-- build:js scripts/scripts.js -->
     <script src="scripts/app.js"></script>
