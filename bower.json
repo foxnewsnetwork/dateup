@@ -9,7 +9,8 @@
     "angular-cookies": "~1.0.5",
     "angular-sanitize": "~1.0.5",
     "underscore": "~1.4.4",
-    "requirejs": "~2.1.6"
+    "requirejs": "~2.1.6",
+    "holderjs": "~1.9.0"
   },
   "devDependencies": {
     "angular-mocks": "~1.0.5",
