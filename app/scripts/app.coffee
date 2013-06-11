@@ -1,5 +1,6 @@
 require.config
   paths:
+    "faker": "components/Faker/Faker",
     "angular": "components/angular/angular",
     "angular-resource": "components/angular-resource/angular-resource",
     "angular-cookies": "components/angular-cookies/angular-cookies",

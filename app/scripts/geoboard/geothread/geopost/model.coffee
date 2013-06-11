@@ -1,11 +1,11 @@
-define 'geoboard/geothread/geopost/model', [], ->
+define 'geoboard/geothread/geopost/model', ['faker'], (F)->
   class Model
     @generate = (thread_id) -> new Model thread_id
     constructor: (thread_id)->
-      @id = 1
-      @user_id = 1
+      @id = Math.floor Math.random 100
+      @user_id = Math.floor Math.random 100
       @thread_id = thread_id
-      @username = "anonymous"
+      @username = F.Name.findName()
       @image_link = null
-      @content = "nothing"
+      @content = F.Lorem.paragraph 1 + Math.floor Math.random 10
       
