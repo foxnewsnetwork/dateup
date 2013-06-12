@@ -3,21 +3,42 @@
 @import "layout";
 
 body {
-  background-color: #EEF2FF;
+  h1.title-box {
+    color: #332d2a;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccdccb;
+    font-size: 22px;
+  }
 }
 
 header.main-header {
-  padding-top: 40px;
+  padding: 40px;
+  height: 200px;
+  h1.app-name {
+    font-size: 30px;
+    color: #332d2a;
+  }
+}
+section.search-header {
+  margin-top: -30px;
+  margin-bottom: 20px;
+  form.search-bar {
+    background-color: #efe;
+    border: 2px solid #ccd0dd;
+    padding: 15px;
+    text-align: center;
+  }
+  label.search-label {
+    font-size: 26px;
+    margin-right: 10px;
+  }
+  input.search-query {
+    padding-left: 10px;
+    font-size: 26px;
+    width: 350px;
+  }
 }
 
-.row-header {
-  .logo {
-    text-align: center;
-
-    .logo-text {
-      font-size: 24px;
-      font-weight: bold;
-      color: #660011;
-    }
-  }
+section.announcements {
+  
 }

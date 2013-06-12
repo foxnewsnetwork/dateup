@@ -4,7 +4,8 @@ define 'main/controller', ['geoboard/geothread/model', "geoboard/tag/model"], (G
       app.controller 'MainCtrl', ($scope) ->
         $scope.app_name = "DateupApp"
         $scope.location = "Hell"
-        $scope.threads = Geothread.interestingThreads()
-        $scope.tags = Tag.interestingTags()
+        $scope.threads = Geothread.interestingThreads 2
+        $scope.tags = Tag.interestingTags 2
+        $scope.announcements = [0..2].map -> { speaker: "me", content: Geothread.generate().posts[0].content }
         $scope.search = ->
           $scope.threads = Geothread.search $scope.query

@@ -1,14 +1,29 @@
 header.main-header
   div.container
-    h1 {{app_name}}
+    h1.app-name {{app_name}}
+
+section.search-header
+  div.container
     form.search-bar.form-inline(action="#/q/{{query | queryString}}")
       label.search-label I am looking for
         input(ng-model="query").input-xlarge.search-query
-      input.search.btn(type="submit", ng-click="search()") Search
+      input.search-btn.btn-large.btn-primary(type="submit", ng-click="search()", value="Search") Search
 
-div.container
-  div.row-fluid
-    div.span8.latest-thread-box
-      geothread(ng-repeat="thread in threads")
-    div.span4.nearest-interest-box
-      geotag(ng-repeat="tag in tags")
+section.announcements
+  div.container
+    div.row
+      div.span12.latest-announcements
+        h1.title-box Announcements
+        dl.announcements-list(ng-repeat="announcement in announcements")
+          dt.announced-by {{announcement.speaker}}
+          dd.announced-stuff {{announcement.content}}
+
+section.search-results
+  div.container
+    div.row
+      div.span8.latest-thread-box
+        h1.title-box Latest Threads
+        geothread(ng-repeat="thread in threads")
+      div.span4.nearest-interest-box
+        h1.title-box Latest Interests
+        geotag(ng-repeat="tag in tags")
