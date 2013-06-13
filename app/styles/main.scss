@@ -11,8 +11,11 @@ body {
   }
 }
 
-header.main-header {
+header {
   padding: 40px;
+}
+
+header.main-header {
   height: 200px;
   h1.app-name {
     font-size: 30px;

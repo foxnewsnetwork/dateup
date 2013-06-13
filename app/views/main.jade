@@ -7,7 +7,7 @@ section.search-header
     form.search-bar.form-inline(action="#/q/{{query | queryString}}")
       label.search-label I am looking for
         input(ng-model="query").input-xlarge.search-query
-      input.search-btn.btn-large.btn-primary(type="submit", ng-click="search()", value="Search") Search
+      input.search-btn.btn-large.btn-primary(type="submit",value="Search") Search
 
 section.announcements
   div.container

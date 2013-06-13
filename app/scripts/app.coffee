@@ -18,6 +18,7 @@ require.config
     "layout/navigation/controller": "scripts/layout/navigation/controller",
     "layout/navigation/directive": "scripts/layout/navigation/directive",
     "geoboard": "scripts/geoboard",
+    "geoboard/controller": "scripts/geoboard/controller",
     "geoboard/tag": "scripts/geoboard/tag",
     "geoboard/tag/model": "scripts/geoboard/tag/model",
     "geoboard/tag/directive": "scripts/geoboard/tag/directive",

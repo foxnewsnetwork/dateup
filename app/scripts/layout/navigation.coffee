@@ -1,5 +1,5 @@
-define 'layout/navigation', ['layout/navigation/controller', 'layout/navigation/directive'], (ctrl, directive) ->
+define 'layout/navigation', ['layout/navigation/controller', 'layout/navigation/directive'], (Ctrl, Directive) ->
   class Navigation
     constructor: (app) ->
-      app.controller "NavigationCtrl", ctrl.manage
-      app.directive "navigation", directive
+      new Directive app
+      new Ctrl app

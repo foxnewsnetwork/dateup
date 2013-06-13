@@ -10,6 +10,6 @@ define "config/routes", [], ->
             controller: 'MainCtrl'
           .when '/q/:query',
             templateUrl: 'views/geoboard.html'
-            controller: 'GeoThreadCtrl'
+            controller: 'GeoBoardCtrl'
           .otherwise
             redirectTo: "/"
