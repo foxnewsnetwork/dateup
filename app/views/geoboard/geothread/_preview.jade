@@ -1,0 +1,11 @@
+div.geothreadpreview(id="geothread-{{thread.id}}")
+  table.geothread-preview-table
+    tbody.geothread-preview-body
+      tr.geothread-preview-row
+        td.geothread-point-column
+          span.geothread-point
+        td.geothread-posts-column
+          a.geothread-link(href="#/res/{{thread.id}}")
+            ul.geoposts
+              geopost(ng-repeat="post in thread.posts")
+

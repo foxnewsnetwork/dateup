@@ -6,10 +6,13 @@ define "config/routes", [], ->
       app.config ($routeProvider) ->
         $routeProvider
           .when '/',
-            templateUrl: 'views/main.html'
-            controller: 'MainCtrl'
+            templateUrl: 'views/main/index.html'
+            controller: 'MainCtrl#index'
           .when '/q/:query',
-            templateUrl: 'views/geoboard.html'
-            controller: 'GeoBoardCtrl'
+            templateUrl: 'views/geoboard/index.html'
+            controller: 'GeoBoardCtrl#index'
+          .when '/res/:id',
+            templateUrl: 'views/geoboard/geothread/show.html'
+            controller: 'GeoThreadCtrl#show'
           .otherwise
             redirectTo: "/"

@@ -1,0 +1,10 @@
+li.geopost(id="geopost-{{post.id}}")
+  table.geopost-table(cellspacing=0)
+    tbody.geopost-body
+      tr.geopost-row
+        td.geopost-column
+          div.geopost-header By: {{post.username}} | ID: {{post.id}}
+          div.geopost-content
+            span.geopost-thumbnail
+            span.geopost-text {{post.content}}
+        td.geopost-filler &nbsp;

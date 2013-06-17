@@ -1,0 +1,11 @@
+header.thread-stats
+  div.container
+    div.row
+      div.span12
+        h1.title-box Replies: {{stats['post_count']}}
+
+section.thread-posts
+  div.container
+    div.row
+      div.span12.geoposts
+        geopost(ng-repeat="post in thread.posts")          

@@ -3,7 +3,8 @@ requirements = [
   'geoboard/geothread/geopost/model', 
   'geoboard/geothread/geopost/directive'
 ]
-define 'geoboard/geothread/geopost', requirements, (ctrl, model, directive) ->
+define 'geoboard/geothread/geopost', requirements, (Ctrl, model, Directive) ->
   class Geopost
     constructor: (app) ->
-      app.directive 'geopost', directive
+      new Ctrl app
+      new Directive app

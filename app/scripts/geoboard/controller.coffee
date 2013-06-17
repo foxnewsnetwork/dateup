@@ -7,4 +7,4 @@ define "geoboard/controller", requirements, (Tag, Thread)->
         $scope.tags = Tag.interestingTags(10)
         $scope.threads = Thread.interestingThreads(6)
       @index.$inject = ['$scope', '$routeParams']
-      app.controller "GeoBoardCtrl", @index
+      app.controller "GeoBoardCtrl#index", @index
