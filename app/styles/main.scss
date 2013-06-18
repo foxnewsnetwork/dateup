@@ -15,7 +15,27 @@ header {
   padding: 40px;
 }
 
-header.main-header {
+header.navigation-home {
+  padding: 0px;
+}
+
+section.link-header {
+  text-align: center;
+  ul {
+    list-style: none;
+    text-align: center;
+    margin-left: 0px;
+  }
+  li.tag {
+    display: inline-block;
+    a {
+      width: 75px;
+      height: 45px;
+    }
+  }
+}
+
+section.main-header {
   height: 200px;
   h1.app-name {
     font-size: 30px;
@@ -23,11 +43,8 @@ header.main-header {
   }
 }
 section.search-header {
-  margin-top: -30px;
   margin-bottom: 20px;
   form.search-bar {
-    background-color: #efe;
-    border: 2px solid #ccd0dd;
     padding: 15px;
     text-align: center;
   }

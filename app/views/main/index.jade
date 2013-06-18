@@ -2,12 +2,19 @@ header.main-header
   div.container
     h1.app-name {{app_name}}
 
-section.search-header
-  div.container
-    form.search-bar.form-inline(action="#/q/{{query | queryString}}")
-      label.search-label I am looking for
-        input(ng-model="query").input-xlarge.search-query
-      input.search-btn.btn-large.btn-primary(type="submit",value="Search") Search
+section.main-actions
+  section.search-header
+    div.container
+      form.search-bar.form-inline(action="#/q/{{query | queryString}}")
+        label.search-label I am looking for
+          input(ng-model="query").input-xlarge.search-query
+        input.search-btn.btn-large.btn-primary(type="submit",value="Search") Search
+
+  section.link-header
+    div.container
+      ul
+        li.tag(ng-repeat="tag in tags") 
+          a.btn(href="#/q/{{tag.tagname | queryString }}") {{tag.tagname}}
 
 section.announcements
   div.container
@@ -21,9 +28,6 @@ section.announcements
 section.search-results
   div.container
     div.row
-      div.span8.latest-thread-box
+      div.span12.latest-thread-box
         h1.title-box Latest Threads
         geothread(ng-repeat="thread in threads")
-      div.span4.nearest-interest-box
-        h1.title-box Latest Interests
-        geotag(ng-repeat="tag in tags")
