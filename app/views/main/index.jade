@@ -14,7 +14,7 @@ section.main-actions
     div.container
       ul
         li.tag(ng-repeat="tag in tags") 
-          a.btn(href="#/q/{{tag.tagname | queryString }}") {{tag.tagname}}
+          a.tag-btn.btn(href="#/q/{{tag.tagname | queryString }}") {{tag.tagname}}
 
 section.announcements
   div.container

@@ -1,14 +1,6 @@
 navigation(ng-controller="NavigationCtrl")
 
-header.tags-section
-  div.container
-    div.row
-      div.span12.relevant-tags
-        h1.title-box Tags: {{query}}
-    div.row
-      div.span3.geotag(ng-repeat="tag in tags") {{tag.tagname}}
-
-section.threads-section
+header.threads-section
   div.container
     div.row
       div.span12.geothreads-container

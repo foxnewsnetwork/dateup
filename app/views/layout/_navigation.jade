@@ -3,9 +3,5 @@ div.navigation.navbar.navbar-fixed-top
     div.container
       div.nav-collapse.collapse
         ul.nav
-          li.search-tab
-            form.nav-search-form.form-inline(action="#/q/{{query | queryString}}")
-              input.nav-search-input.input-small.search-query(ng-model="query", value="{{query}}")
-              input.nav-search-submit.btn.btn-small(type="submit", value="S")
           li(ng-repeat="link in links")
-            a(href="{{link.href}}") {{link.action}}
+            a(href="#/q/{{link.tagname | queryString}}") {{link.tagname}}
